@@ -1,6 +1,7 @@
 package com.endava.juniorprogram.usersprogram.rest;
 
 import com.endava.juniorprogram.usersprogram.model.User;
+import com.endava.juniorprogram.usersprogram.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
