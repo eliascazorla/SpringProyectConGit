@@ -1,6 +1,7 @@
 package com.endava.juniorprogram.usersprogram.rest;
 
 import com.endava.juniorprogram.usersprogram.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.SocketOption;
@@ -11,7 +12,15 @@ import java.util.List;
 @RequestMapping("/users")
 public class UsersController {
 
+    @Autowired
+    private UsersService usersService;
+
     @GetMapping
+    public List<User> getUsers(){
+        return usersService.getUsers();
+    }
+
+    /*@GetMapping
     public List<User> getUsers(@RequestParam(value= "name", required = false) String name){
         List<User> users = new ArrayList<>();
         if(name == null){
@@ -22,9 +31,9 @@ public class UsersController {
             users.add(new User(4L, name));
         }
         return users;
-    }
+    }*/
 
-    @GetMapping("{id}")
+    /*@GetMapping("{id}")
     public User getUser(@PathVariable("id")  long id){
         System.out.println(id);
         return new User(id, "Diego");
@@ -43,6 +52,6 @@ public class UsersController {
     @PutMapping
     public void updateUser(@RequestBody User user){
         System.out.println("update user " + user);
-    }
+    }*/
 
 }
