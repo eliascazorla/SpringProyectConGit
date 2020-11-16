@@ -14,7 +14,7 @@ public class UsersServiceImpl implements UsersService{
     private DatabaseRepository repository;
 
     @Override
-    public List<User> getUsers() {
-        return repository.getUsers();
+    public List<User> getUsers(String name) {
+        return repository.getUsers(name);
     }
 }

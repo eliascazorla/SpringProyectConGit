@@ -17,22 +17,9 @@ public class UsersController {
     private UsersService usersService;
 
     @GetMapping
-    public List<User> getUsers(){
-        return usersService.getUsers();
-    }
-
-    /*@GetMapping
     public List<User> getUsers(@RequestParam(value= "name", required = false) String name){
-        List<User> users = new ArrayList<>();
-        if(name == null){
-            users.add(new User(1L, "Diego"));
-            users.add(new User(2L, "Carina"));
-            users.add(new User(3L, "Elias"));
-        }else{
-            users.add(new User(4L, name));
-        }
-        return users;
-    }*/
+        return usersService.getUsers(name);
+    }
 
     /*@GetMapping("{id}")
     public User getUser(@PathVariable("id")  long id){
