@@ -27,17 +27,17 @@ public class UsersController {
     }
 
 
-    /*@DeleteMapping("{id}")
-    public void deleteUser(@PathVariable("id") long id){
-        System.out.println("Delete user: " + id);
+    @DeleteMapping("{id}")
+    public User deleteUser(@PathVariable("id") long id){
+        return usersService.deleteUser(id);
     }
 
     @PostMapping
-    public void addUser(@RequestBody User user){
-        System.out.println("Add user " + user);
+    public User addUser(@RequestBody User user){
+        return usersService.addUser(user);
     }
 
-    @PutMapping
+    /*@PutMapping
     public void updateUser(@RequestBody User user){
         System.out.println("update user " + user);
     }*/
