@@ -33,4 +33,9 @@ public class UsersServiceImpl implements UsersService{
         return repository.addUser(user);
     }
 
+    @Override
+    public User updateUser(User user) {
+        return repository.updateUser(user);
+    }
+
 }

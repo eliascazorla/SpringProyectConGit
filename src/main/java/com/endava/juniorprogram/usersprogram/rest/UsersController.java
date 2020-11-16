@@ -37,9 +37,9 @@ public class UsersController {
         return usersService.addUser(user);
     }
 
-    /*@PutMapping
-    public void updateUser(@RequestBody User user){
-        System.out.println("update user " + user);
-    }*/
+    @PutMapping
+    public User updateUser(@RequestBody User user){
+        return usersService.updateUser(user);
+    }
 
 }

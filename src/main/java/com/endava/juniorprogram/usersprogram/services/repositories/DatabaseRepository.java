@@ -9,4 +9,5 @@ public interface DatabaseRepository {
     User getUser(long id);
     User deleteUser(long id);
     User addUser(User user);
+    User updateUser(User user);
 }
