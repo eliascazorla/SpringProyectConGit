@@ -26,4 +26,14 @@ public class UsersRepo implements DatabaseRepository{
     public User getUser(long id) {
         return new User(id, "Elias");
     }
+
+    @Override
+    public User deleteUser(long id) {
+        return new User(id, "Elias");
+    }
+
+    @Override
+    public User addUser(User user) {
+        return new User(user.getId(), user.getName());
+    }
 }

@@ -23,4 +23,14 @@ public class UsersServiceImpl implements UsersService{
         return repository.getUser(id);
     }
 
+    @Override
+    public User deleteUser(long id) {
+        return repository.deleteUser(id);
+    }
+
+    @Override
+    public User addUser(User user) {
+        return repository.addUser(user);
+    }
+
 }

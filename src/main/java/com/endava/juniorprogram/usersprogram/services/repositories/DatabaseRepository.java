@@ -7,5 +7,6 @@ import java.util.List;
 public interface DatabaseRepository {
     List<User> getUsers(String name);
     User getUser(long id);
-
+    User deleteUser(long id);
+    User addUser(User user);
 }
