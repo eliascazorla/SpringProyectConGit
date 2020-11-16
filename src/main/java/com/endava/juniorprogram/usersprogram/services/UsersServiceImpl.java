@@ -17,4 +17,9 @@ public class UsersServiceImpl implements UsersService{
     public List<User> getUsers(String name) {
         return repository.getUsers(name);
     }
+
+    @Override
+    public User getUser(long id) {
+        return repository.getUser(id);
+    }
 }

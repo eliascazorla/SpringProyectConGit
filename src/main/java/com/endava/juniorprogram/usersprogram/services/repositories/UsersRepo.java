@@ -20,4 +20,9 @@ public class UsersRepo implements DatabaseRepository{
         }
         return users;
     }
+
+    @Override
+    public User getUser(long id) {
+        return new User(id, "Elias");
+    }
 }

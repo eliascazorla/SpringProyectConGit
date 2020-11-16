@@ -21,13 +21,12 @@ public class UsersController {
         return usersService.getUsers(name);
     }
 
-    /*@GetMapping("{id}")
+    @GetMapping("{id}")
     public User getUser(@PathVariable("id")  long id){
-        System.out.println(id);
-        return new User(id, "Diego");
+        return usersService.getUser(id);
     }
 
-    @DeleteMapping("{id}")
+    /*@DeleteMapping("{id}")
     public void deleteUser(@PathVariable("id") long id){
         System.out.println("Delete user: " + id);
     }
