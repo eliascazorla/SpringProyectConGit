@@ -26,6 +26,7 @@ public class UsersController {
         return usersService.getUser(id);
     }
 
+
     /*@DeleteMapping("{id}")
     public void deleteUser(@PathVariable("id") long id){
         System.out.println("Delete user: " + id);

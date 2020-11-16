@@ -22,4 +22,5 @@ public class UsersServiceImpl implements UsersService{
     public User getUser(long id) {
         return repository.getUser(id);
     }
+
 }
